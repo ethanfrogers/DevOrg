@@ -1,2 +1,3 @@
 language: java
-install: ant deps
+after_success:
+	- ant deployCode
