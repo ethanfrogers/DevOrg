@@ -1,0 +1,1 @@
+<apex:page standardController="Artist__c" action="{!redirect}&actiontype=View&objecttype=Artist__c" extensions="skuid.Redirects"/>

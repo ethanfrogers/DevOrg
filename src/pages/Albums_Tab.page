@@ -1,0 +1,3 @@
+<apex:page standardController="Album__c" recordSetVar="c" showHeader="false">
+<skuid:page actiontype="Tab" objecttype="Album__c"/>
+</apex:page>
