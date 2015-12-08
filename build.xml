@@ -1,7 +1,8 @@
 <project name="Sample usage of Salesforce Ant tasks" default="deployCode" basedir="." xmlns:sf="antlib:com.salesforce">
 
-    <property file="build.properties"/>
     <property environment="env"/>
+    <property file="build.properties"/>
+    
 
     <!-- Setting default value for username, password and session id properties to empty string 
          so unset values are treated as empty. Without this, ant expressions such as ${sf.username}
