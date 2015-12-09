@@ -46,6 +46,7 @@
     </actionOverrides>
     <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
     <deploymentStatus>Deployed</deploymentStatus>
+    <deprecated>false</deprecated>
     <enableActivities>false</enableActivities>
     <enableBulkApi>true</enableBulkApi>
     <enableFeeds>false</enableFeeds>
@@ -54,38 +55,52 @@
     <enableSharing>true</enableSharing>
     <enableStreamingApi>true</enableStreamingApi>
     <fields>
-        <fullName>Playlist__c</fullName>
+        <fullName>skuid__Page__c</fullName>
+        <deprecated>false</deprecated>
+        <description>The page on which this component was created.</description>
         <externalId>false</externalId>
-        <label>Playlist</label>
-        <referenceTo>Playlist__c</referenceTo>
-        <relationshipLabel>Playlist Tracks</relationshipLabel>
-        <relationshipName>Tracks</relationshipName>
+        <label>Page</label>
+        <referenceTo>skuid__Page__c</referenceTo>
+        <relationshipLabel>Personalization Settings</relationshipLabel>
+        <relationshipName>Personalization_Settings</relationshipName>
         <relationshipOrder>0</relationshipOrder>
-        <reparentableMasterDetail>true</reparentableMasterDetail>
+        <reparentableMasterDetail>false</reparentableMasterDetail>
         <trackTrending>false</trackTrending>
         <type>MasterDetail</type>
         <writeRequiresMasterRead>false</writeRequiresMasterRead>
     </fields>
     <fields>
-        <fullName>Song__c</fullName>
+        <fullName>skuid__Settings__c</fullName>
+        <defaultValue>&quot;{}&quot;</defaultValue>
+        <deprecated>false</deprecated>
+        <description>A JSON string representing the settings for a specific instance of a component.</description>
         <externalId>false</externalId>
-        <label>Song</label>
-        <referenceTo>Song__c</referenceTo>
-        <relationshipLabel>Playlist Tracks</relationshipLabel>
-        <relationshipName>Songs</relationshipName>
-        <relationshipOrder>1</relationshipOrder>
-        <reparentableMasterDetail>true</reparentableMasterDetail>
+        <inlineHelpText>A JSON string representing the settings for a specific instance of a component.</inlineHelpText>
+        <label>Settings</label>
+        <length>131072</length>
         <trackTrending>false</trackTrending>
-        <type>MasterDetail</type>
-        <writeRequiresMasterRead>false</writeRequiresMasterRead>
+        <type>LongTextArea</type>
+        <visibleLines>9</visibleLines>
     </fields>
-    <label>Playlist Track</label>
+    <fields>
+        <fullName>skuid__User__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>User</label>
+        <referenceTo>User</referenceTo>
+        <relationshipName>Personalization_Settings</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <label>Personalization Setting</label>
     <nameField>
-        <displayFormat>Track-{0000}</displayFormat>
-        <label>Playlist Track Number</label>
+        <displayFormat>skPS-{0}</displayFormat>
+        <label>Setting ID</label>
         <type>AutoNumber</type>
     </nameField>
-    <pluralLabel>Playlist Tracks</pluralLabel>
+    <pluralLabel>Personalization Settings</pluralLabel>
     <searchLayouts/>
     <sharingModel>ControlledByParent</sharingModel>
 </CustomObject>
